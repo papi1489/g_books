@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titre: MyString
+  auteur: MyString
+  description: MyString
+  rayon: MyString
+  image_url: MyString
+
+two:
+  titre: MyString
+  auteur: MyString
+  description: MyString
+  rayon: MyString
+  image_url: MyString

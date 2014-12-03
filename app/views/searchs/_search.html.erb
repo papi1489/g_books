@@ -1,0 +1,8 @@
+<h4 style="margin-bottom:0px; font-weight:bold; color:#007FCC;">Recherche personaliser</h4>
+<%= form_tag search_resu_path, method: 'get' do %>
+Element de recherche:<br />
+<%= select_tag :elem_rech, options_for_select(['titre', 'auteur', 'description']) %><br />
+Tapez un mot:<br />
+<%= text_field_tag :mot_cherch2 %>
+<%= submit_tag "rechercher" %>
+<% end %>

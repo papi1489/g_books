@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @book.titre %>
+</p>
+
+<p>
+  <strong>Auteur:</strong>
+  <%= @book.auteur %>
+</p>
+
+<p>
+  <strong>Rayon:</strong>
+  <%= @book.rayon %>
+</p>
+
+<p>
+  <strong>Image:</strong><br />
+  <%= image_tag(@book.image,) if @book.image.present? %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
+<%= link_to 'Modifier', edit_book_path(@book) %> |
+<%= link_to 'Retour', books_path %>

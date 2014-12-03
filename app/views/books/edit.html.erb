@@ -1,0 +1,32 @@
+<h3>Modification du livre</h3>
+
+<%= form_for(@book, :html => {:multipart => true}) do |f| %>
+<%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.label :titre %><br />
+    <%= f.text_field :titre %>
+  </div>
+  <div class="field">
+    <%= f.label :auteur %><br />
+    <%= f.text_field :auteur %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, size: 8 %>
+  </div>
+  <div class="field">
+  <%= f.label :rayon %><br />
+    <%= f.text_field :rayon %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :image, "Image du livre" %><br />
+    <%= f.file_field :image %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Modifier" %>
+  </div>
+<% end %>
+<%= link_to "retour", books_path %>
+

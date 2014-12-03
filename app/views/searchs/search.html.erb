@@ -1,0 +1,19 @@
+<h3><center>Trouver un rapidement un livre</center></h3>
+<div style="display: inline-block; width:700px">
+<div style="display:inline-block; width:250px; float:left">
+<%= form_tag search_resu_path, method: 'get' do %>
+<h5 style="margin-bottom:0px; font-weight:bold; color:#007FCC">Tapez un element de recherche:</h5>
+<%= text_field_tag :mot_cherch1 %>
+<%= submit_tag "rechercher" %>
+  
+<% end %>
+</div>
+
+
+<div style="display:inline-block; width: 300px; float:right">
+ 
+<%= render 'search' %>
+
+</div>
+</div>
+<%= link_to "retour", books_path %>

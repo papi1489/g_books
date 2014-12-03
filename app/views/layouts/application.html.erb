@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @titre %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/stylesheets' %>
+  <%= javascript_include_tag :defaults %>
+</head>
+<body>
+<div class="container">
+
+<div class="entete">
+<%= image_tag("banner_image.jpg", :alt => "banner", :class => "") %>
+</div>
+<%= render 'layouts/header' %><br />
+<section>
+<% flash.each do |key, value| %>
+     <div class="flash <%= key %>"><%= value %></div>
+<% end %>
+<%= yield %>
+</section>
+
+</div>
+</body>
+</html>
